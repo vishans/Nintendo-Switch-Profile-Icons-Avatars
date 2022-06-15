@@ -13,7 +13,7 @@ with Image.open("sprites.png") as spriteSheet:
                 avatarCount+= 1
                 avatar = spriteSheet.crop((1+(257*i),1+(257*j),257*(i+1),257*(j+1)))
                 # avatar.show()
-                fileName = token_hex()
+                fileName = f'{avatarCount}{token_hex()}'
                 avatar.save(f'avatars/{fileName}.png')
     
     print(f'{avatarCount} avatars, each with size {avatar.size}px')
